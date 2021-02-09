@@ -1,0 +1,28 @@
+<div class="time-table" *ngIf="data$ | async as userData">
+  <h2 class="page-title">{{ userData?.title }}</h2>
+
+  <table class="table" cellspacing="0" cellpadding="0">
+    <thead class="table-head">
+      <tr class="row">
+        <td class="cell cab">Каб. №</td>
+        <td class="cell job">Специалист</td>
+        <td class="cell name">ФИО врача</td>
+        <td class="cell time">пн</td>
+        <td class="cell time">вт</td>
+        <td class="cell time">ср</td>
+        <td class="cell time">чт</td>
+        <td class="cell time">пт</td>
+        <td class="cell time">сб</td>
+        <td class="cell time">вс</td>
+      </tr>
+    </thead>
+    <tbody class="table-body">
+      <tr class="row" [class.even]="even" *ngFor="let user of userData?.users; even as even">
+        <td class="cell cab">{{ user.cabinet }}</td>
+        <td class="cell job">{{ user.job }}</td>
+        <td class="cell name">{{ user.name }}</td>
+        <td class="cell time" *ngFor="let time of user.times">{{ time }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
