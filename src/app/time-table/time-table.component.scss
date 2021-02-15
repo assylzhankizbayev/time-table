@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px 0 0;
   height: 50px;
 }
 
@@ -24,11 +25,11 @@
 
   .cell {
     &:first-child {
-      padding-left: 2rem;
+      padding-left: 4rem;
     }
 
     &:last-child {
-      padding-right: 2rem;
+      padding-right: 4rem;
     }
   }
 
@@ -63,7 +64,7 @@
 
       .cell {
         color: #fff;
-        font-size: 140%;
+        font-size: 130%;
         text-align: center;
       }
     }
@@ -71,5 +72,5 @@
 }
 
 .time {
-  width: 10%;
+  width: 170px;
 }
