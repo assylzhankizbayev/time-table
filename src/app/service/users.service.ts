@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { User } from '../models/user.model';
-import * as data from '../../assets/mock-data/users2.json';
+import * as data from '../../assets/mock-data/users1.json';
 
 @Injectable({
   providedIn: 'root'
